@@ -39,7 +39,7 @@ export default function ContactPage() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-xl text-white/90 leading-relaxed"
           >
-            Reach out for reservations, inquiries, or any assistance. We're here to make your stay extraordinary.
+            Reach out for reservations, inquiries, or any assistance. We&apos;re here to make your stay extraordinary.
           </motion.p>
         </div>
       </section>
@@ -57,7 +57,7 @@ export default function ContactPage() {
           >
             <h2 className="text-4xl font-bold text-foreground mb-6">Get in Touch</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We're available to answer questions, take reservations, or provide any help you need. Reach us through any of the methods below.
+              We&apos;re available to answer questions, take reservations, or provide any help you need. Reach us through any of the methods below.
             </p>
 
             <div className="space-y-6">

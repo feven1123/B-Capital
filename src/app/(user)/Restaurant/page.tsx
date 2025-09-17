@@ -58,7 +58,7 @@ export default function RestaurantPage() {
                 flair by our talented culinary team.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Whether you're joining us for a business lunch, romantic dinner, or special celebration, our elegant
+                Whether you&apos;re joining us for a business lunch, romantic dinner, or special celebration, our elegant
                 atmosphere and exceptional service create the perfect setting for any occasion.
               </p>
 

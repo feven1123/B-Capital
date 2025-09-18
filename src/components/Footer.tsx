@@ -23,13 +23,13 @@ export default function Footer() {
               <Link href="/" className="hover:text-blue-300 transition-colors duration-300">Home</Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-blue-300 transition-colors duration-300">About Us</Link>
+              <Link href="/About" className="hover:text-blue-300 transition-colors duration-300">About Us</Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-blue-300 transition-colors duration-300">Contact</Link>
+              <Link href="/Contact" className="hover:text-blue-300 transition-colors duration-300">Contact</Link>
             </li>
             <li>
-              <Link href="/news" className="hover:text-blue-300 transition-colors duration-300">News & Events</Link>
+              <Link href="/Events" className="hover:text-blue-300 transition-colors duration-300">News & Events</Link>
             </li>
           </ul>
         </div>

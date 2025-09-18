@@ -25,7 +25,7 @@ export default function MasjidPage() {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/prying room.jpg"
+            src="/images/masjid.jpg"
             alt="Indoor Masjid"
             fill
             className="object-cover scale-105 brightness-90"

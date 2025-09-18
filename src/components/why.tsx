@@ -9,7 +9,7 @@ const features = [
     description: "High-speed internet access throughout the hotel for all guests.",
   },
   {
-    image: "/images/prying room.jpg",
+    image: "/images/masjid.jpg",
     title: "Muslim Prayer Room",
     description: "Quiet and dedicated Islamic prayer space available for travelers.",
   },

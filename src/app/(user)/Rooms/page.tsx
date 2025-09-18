@@ -59,10 +59,10 @@ export default function RoomPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
         </div>
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-6xl md:text-7xl font-extrabold text-white animate-fadeUp mb-4 drop-shadow-lg">
+          <h1 className="text-6xl md:text-7xl font-extrabold text-white animate-fade-in mb-4 drop-shadow-lg">
             Our Rooms & Suites
           </h1>
-          <p className="text-xl md:text-2xl text-pretty max-w-2xl mx-auto animate-fadeUp-delay">
+          <p className="text-xl md:text-2xl text-pretty max-w-2xl mx-auto animate-fade-in delay-200">
             Experience comfort and luxury in our thoughtfully designed accommodations
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function RoomPage() {
                     {room.features.map((feature, featureIndex) => (
                       <div
                         key={featureIndex}
-                        className="flex items-center text-sm text-foreground animate-fadeIn delay-[${featureIndex * 100}ms]"
+                        className="flex items-center text-sm text-foreground"
                       >
                         <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
                         {feature}
@@ -154,8 +154,8 @@ export default function RoomPage() {
       {/* Booking CTA */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-4xl font-bold mb-4 text-balance animate-fadeIn">Ready to Book Your Stay?</h2>
-          <p className="text-xl mb-8 text-pretty animate-fadeIn delay-200">
+          <h2 className="text-4xl font-bold mb-4 text-balance animate-fade-in">Ready to Book Your Stay?</h2>
+          <p className="text-xl mb-8 text-pretty animate-fade-in delay-200">
             Experience the comfort and luxury of B Capital Hotel. Book your room today and enjoy our exceptional service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -171,6 +171,20 @@ export default function RoomPage() {
           </div>
         </div>
       </section>
+
+      {/* Custom Animations */}
+      <style jsx>{`
+        @keyframes fade-in {
+          0% { opacity: 0; transform: translateY(20px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+          animation: fade-in 1s ease-out forwards;
+        }
+        .delay-200 {
+          animation-delay: 0.2s;
+        }
+      `}</style>
     </div>
   );
 }

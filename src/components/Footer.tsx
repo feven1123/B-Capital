@@ -39,10 +39,10 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-white mb-3">Services</h3>
           <ul className="space-y-2">
             <li>
-              <Link href="/booking/rooms" className="hover:text-blue-300 transition-colors duration-300">Room Booking</Link>
+              <Link href="/Rooms" className="hover:text-blue-300 transition-colors duration-300">Room Booking</Link>
             </li>
             <li>
-              <Link href="/booking/tables" className="hover:text-blue-300 transition-colors duration-300">Table Booking</Link>
+              <Link href="/Restaurant" className="hover:text-blue-300 transition-colors duration-300">Table Booking</Link>
             </li>
             <li>
               <Link href="/booking/gym" className="hover:text-blue-300 transition-colors duration-300">Gym Booking</Link>

@@ -34,6 +34,7 @@ export default function Header() {
   const pathname = usePathname();
   const [isAdmin, setIsAdmin] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [serviceOpen, setServiceOpen] = useState(false);
 
   useEffect(() => {
     setIsAdmin(pathname.startsWith('/admin'));
@@ -42,9 +43,7 @@ export default function Header() {
   const links = isAdmin ? adminLinks : publicLinks;
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-lg transition-all duration-300"
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-lg transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo + Site name */}
@@ -76,6 +75,49 @@ export default function Header() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
+
+            {/* Our Service dropdown */}
+            {!isAdmin && (
+              <div className="relative group">
+                <button className="text-gray-600 hover:text-primary transition-colors font-medium flex items-center">
+                  Our Service
+                  <svg
+                    className="ml-1 w-4 h-4 transition-transform group-hover:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {/* Dropdown menu */}
+                <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+                  <Link
+                    href="/Services/Masjid"
+                    className="block px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white
+                    rounded-t-lg"
+                  >
+                    Indoor Masjid
+                  </Link>
+                  <Link
+                    href="/Services/Shuttle"
+                    className="block px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white
+                    "
+                  >
+                    Shuttle Service
+                  </Link>
+                  <Link
+                    href="/Services/Gym"
+                    className="block px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white
+                    rounded-b-lg"
+                  >
+                    Gym
+                  </Link>
+                </div>
+              </div>
+            )}
+
             {/* Book Now button */}
             {!isAdmin && (
               <Link
@@ -132,6 +174,44 @@ export default function Header() {
               {label}
             </Link>
           ))}
+
+          {/* Our Service dropdown (mobile) */}
+          {!isAdmin && (
+            <div className="space-y-1">
+              <button
+                className="w-full text-left block py-2 px-3 rounded hover:bg-primary hover:text-white font-medium transition-colors"
+                onClick={() => setServiceOpen(!serviceOpen)}
+              >
+                Our Service
+              </button>
+              {serviceOpen && (
+                <div className="ml-4 space-y-1">
+                  <Link
+                    href="/Services/Masjid"
+                    className="block py-2 px-3 rounded hover:bg-primary hover:text-white font-medium transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Indoor Masjid
+                  </Link>
+                  <Link
+                    href="/Services/Shuttle"
+                    className="block py-2 px-3 rounded hover:bg-primary hover:text-white font-medium transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Shuttle Service
+                  </Link>
+                  <Link
+                    href="/Services/Gym"
+                    className="block py-2 px-3 rounded hover:bg-primary hover:text-white font-medium transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Gym
+                  </Link>
+                </div>
+              )}
+            </div>
+          )}
+
           {/* Book Now button for mobile */}
           {!isAdmin && (
             <Link

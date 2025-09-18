@@ -98,7 +98,7 @@ export default function HotelPreviewsFancy() {
                   View Restaurant
                 </Button>
               </Link>
-              <Link href="/menu">
+              <Link href="/Menu">
                 <Button
                   variant="outline"
                   className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg transition-all"

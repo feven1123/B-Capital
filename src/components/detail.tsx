@@ -61,7 +61,7 @@ export default function HotelPreviewsFancy() {
           </div>
 
           <div className="mt-16">
-            <Link href="/gallery">
+            <Link href="/Rooms">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg shadow-lg transition-all transform hover:-translate-y-1">
                 View All Rooms
               </Button>
@@ -93,7 +93,7 @@ export default function HotelPreviewsFancy() {
             </div>
 
             <div className="flex gap-4 flex-wrap">
-              <Link href="/restaurant">
+              <Link href="/Restaurant">
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition-all">
                   View Restaurant
                 </Button>
@@ -156,7 +156,7 @@ export default function HotelPreviewsFancy() {
               ))}
             </div>
 
-            <Link href="/events">
+            <Link href="/Events">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg shadow-lg mt-6 transition-all transform hover:-translate-y-1">
                 Plan Your Event
               </Button>

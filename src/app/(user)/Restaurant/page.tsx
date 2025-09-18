@@ -33,7 +33,7 @@ export default function RestaurantPage() {
             >
               Make Reservation
             </Button>
-            <Link href="/menu">
+            <Link href="/Menu">
               <Button
                 size="lg"
                 variant="outline"

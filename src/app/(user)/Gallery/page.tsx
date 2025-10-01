@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -16,14 +16,12 @@ const galleryImages = [
   { src: "/images/event-hall.jpg", alt: "Event Hall", category: "Meeting Hall" },
   { src: "/images/meeting-hall.jpg", alt: "Meeting Hall", category: "Meeting Hall" },
   { src: "/images/meeting-hall-2.jpg", alt: "Meeting Hall", category: "Meeting Hall" },
-  { src: "/images/hotel-pool-deck-with-lounge-chairs.jpg", alt: "Swimming Pool", category: "Swimming Pool" },
-  { src: "/images/luxury-hotel-swimming-pool-area.jpg", alt: "Pool Deck", category: "Swimming Pool" },
   { src: "/images/hotel-exterior-3.jpg", alt: "Hotel Exterior", category: "Outdoor" },
   { src: "/images/hotel-exterior-4.jpg", alt: "Hotel Exterior", category: "Outdoor" },
   { src: "/images/hotel-exterior-5.jpg", alt: "Hotel Front View", category: "Outdoor" },
 ];
 
-const categories = ["Swimming Pool", "Rooms", "Restaurant", "Meeting Hall", "Outdoor"];
+const categories = ["Rooms", "Restaurant", "Meeting Hall", "Outdoor"];
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("Rooms");
@@ -47,7 +45,7 @@ export default function GalleryPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
         </div>
         <div className="relative z-10 text-center max-w-7xl mx-auto px-4">
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white  animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white animate-fade-in">
             B Capital Hotel Gallery
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed animate-fade-in delay-200">

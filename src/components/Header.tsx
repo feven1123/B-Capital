@@ -13,12 +13,7 @@ interface NavLink {
 const publicLinks: NavLink[] = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/About' },
-  { label: 'Restaurant', href: '/Restaurant' },
   { label: 'Gallery', href: '/Gallery' },
-  { label: 'Contact', href: '/Contact' },
-  { label: 'Menu', href: '/Menu' },
-  { label: 'Events', href: '/Events' },
-  { label: 'Rooms', href: '/Rooms' },
 ];
 
 const adminLinks: NavLink[] = [
@@ -46,7 +41,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-lg transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo + Site name */}
+          {/* Logo */}
           <Link
             href={isAdmin ? '/admin/dashboard' : '/'}
             className="flex items-center space-x-0.5 group"
@@ -59,10 +54,9 @@ export default function Header() {
               height={50}
               className="transition-transform duration-300 transform group-hover:scale-105"
             />
-            <span className="text-gray-900 text-xl font-bold select-none"></span>
           </Link>
 
-          {/* Navigation desktop */}
+          {/* Desktop navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {links.map(({ href, label }) => (
               <Link
@@ -95,24 +89,33 @@ export default function Header() {
                 <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
                   <Link
                     href="/Services/Masjid"
-                    className="block px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white
-                    rounded-t-lg"
+                    className="block px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white rounded-t-lg"
                   >
                     Indoor Masjid
                   </Link>
                   <Link
                     href="/Services/Shuttle"
-                    className="block px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white
-                    "
+                    className="block px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white"
                   >
                     Shuttle Service
                   </Link>
                   <Link
                     href="/Services/Gym"
-                    className="block px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white
-                    rounded-b-lg"
+                    className="block px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white"
                   >
                     Gym
+                  </Link>
+                  <Link
+                    href="/Restaurant"
+                    className="block px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white"
+                  >
+                    Restaurant
+                  </Link>
+                  <Link
+                    href="/Events"
+                    className="block px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white rounded-b-lg"
+                  >
+                    Events
                   </Link>
                 </div>
               </div>
@@ -206,6 +209,20 @@ export default function Header() {
                     onClick={() => setMenuOpen(false)}
                   >
                     Gym
+                  </Link>
+                  <Link
+                    href="/Restaurant"
+                    className="block py-2 px-3 rounded hover:bg-primary hover:text-white font-medium transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Restaurant
+                  </Link>
+                  <Link
+                    href="/Events"
+                    className="block py-2 px-3 rounded hover:bg-primary hover:text-white font-medium transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Events
                   </Link>
                 </div>
               )}
